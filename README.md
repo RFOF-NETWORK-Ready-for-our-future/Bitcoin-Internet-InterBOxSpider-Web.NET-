@@ -867,7 +867,7 @@ Kein "echter" Markt durch 2 Euro: Diese 2 Euro sind lediglich die initiale Preis
 
 Liquidität ist entscheidend: Ein "Wert" ist nur dann real, wenn er auch eingelöst werden kann. Wenn du den einzigen 0.00000001 Coin hast und er rechnerisch 200 Millionen Euro wert ist, aber niemand bereit oder in der Lage ist, ihn dir für diesen Preis abzukaufen, ist der Wert nicht realisierbar.
 
-Zweck der Blockchain/Coins: Für ein Netzwerk wie #BitcoinInternet InterBOxSpider@Web.NET@RFOF-NETWORK wäre es viel wichtiger, dass die Coins einen tatsächlichen Nutzen innerhalb des Netzwerks haben (z.B. als Gebühren, für Staking, zur Validierung, für Smart Contract-Interaktionen), als einen künstlich hohen Einzelwert aufrechtzuerhalten, der auf extrem geringem Supply basiert.
+Zweck der Blockchain/Coins: Für ein Netzwerk wie #BitcoinInternet InterBOxSpider@Web.NET @RFOF-NETWORK wäre es viel wichtiger, dass die Coins einen tatsächlichen Nutzen innerhalb des Netzwerks haben (z.B. als Gebühren, für Staking, zur Validierung, für Smart Contract-Interaktionen), als einen künstlich hohen Einzelwert aufrechtzuerhalten, der auf extrem geringem Supply basiert.
 
 Zusammenfassend:
 
