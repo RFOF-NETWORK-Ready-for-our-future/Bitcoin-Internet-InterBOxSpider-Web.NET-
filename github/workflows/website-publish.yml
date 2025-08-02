@@ -1,0 +1,42 @@
+name: Publish BitcoinInternet Website
+
+on:
+  push:
+    branches:
+      - main # Trigger on push to main branch
+    paths:
+      - 'docs/**' # Only build if docs or config change
+      - 'assets/**'
+      - '_config.yml'
+      - 'CNAME'
+      - 'README.md' # If README is part of the site build
+
+  workflow_dispatch: # Allow manual triggering
+
+jobs:
+  build_and_deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0 # Fetch all history for git-based publishing (e.g., gh-pages branch)
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+
+      - name: Install MkDocs and Material for MkDocs
+        run: pip install mkdocs mkdocs-material
+
+      - name: Build documentation
+        run: mkdocs build --site-dir public_html # Builds the site into 'public_html' directory
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v4 # Action for deploying to gh-pages branch
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./public_html # Directory containing the built site
+          cname: ${{ needs.extract_cname.outputs.cname_value }} # Use CNAME from a previous job/step if needed, or define directly
+          force_orphan: true # Recommended for clean deployments
