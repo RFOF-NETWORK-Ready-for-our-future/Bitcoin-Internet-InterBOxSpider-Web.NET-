@@ -1,0 +1,27 @@
+# global_config_public.toml
+# This file contains public-facing configuration parameters for the #BitcoinInternet
+# that are safe to expose and might be consumed by public tools or client applications.
+
+[network]
+# Publicly accessible entry points for the #BitcoinInternet network
+public_api_base_url = "https://api.bitcoininternet.org"
+public_status_url = "https://status.bitcoininternet.org/status/public"
+detailed_status_url = "https://status.bitcoininternet.org/status/details"
+
+[website]
+# Configuration for the public GitHub Pages website
+site_name = "#BitcoinInternet: The Axiomatic Quantum Leap"
+site_description = "Building the future of decentralized, axiomatically secured digital existence."
+github_repo_url = "https://github.com/RFOF-NETWORK-Ready-for-our-future/BitcoinInternet"
+custom_domain = "bitcoininternet.org"
+
+[community]
+# Public contact and community links
+email_contact = "contact@bitcoininternet.org"
+discord_invite_link = "https://discord.gg/BitcoinInternetCommunity" # Example placeholder
+twitter_handle = "@BitcoinInternet"
+
+[axioms]
+# Public facing information about the core axioms (no sensitive details)
+axiom_version = "PZQQET-Axiom-1.0"
+praiai_public_identifier = "PRAIAI-Cognitor-Alpha"
