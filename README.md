@@ -1066,18 +1066,6 @@ RFOF-NETWORK-Ready-for-our-future/BitcoinInternet/
             └── CognitorAxiomFlux_PRAIAI_Optimizer.rs
 ```
 
------
-
-### **Wichtige Korrekturen und Klarstellungen:**
-
-1.  **Einheitliches `BitcoinInternet` Repo:** Die gesamte Struktur befindet sich nun im `RFOF-NETWORK-Ready-for-our-future/BitcoinInternet` Repository. Dies vereinfacht die Verwaltung und stärkt seine Rolle als zentraler Hub.
-2.  **Kein "NewApp-" Präfix mehr:** Die Ordner unter `CognitorAxiomFlux_Ecosystem/` heißen jetzt einfach `DataVault/`, `CodeForge/` usw. Dies betont ihren integralen Charakter und ihre Rolle als tiefgreifende Projekte innerhalb des Systems, nicht unbedingt als separate Frontend-Apps. Sie können Hardware-Konzepte, tiefere Protokolle oder Backend-Services sein, die die Gesamtfunktionalität des **\#BitcoinInternet** erweitern.
-3.  **`docs/` für `gh-pages`:** Der `docs/` Ordner ist weiterhin die Quelle für die öffentliche `gh-pages` Website, die Sie bereits unter `https://rfof-network-ready-for-our-future.github.io/Bitcoin-Internet-InterBOxSpider-Web.NET-/` hosten. Das `README.md` dient dabei oft als die initiale Landing Page.
-4.  **`core_projects/` als Haupt-Container:** Alle 8 Kern-Services (`AxiomFlux`, `VoiceNexus` etc.) sowie die foundationalen Systeme (`InterBOxSpider-NET-Core`, `BOxchain-Core`, `Base-Languages`) liegen nun unter einem übergeordneten `core_projects/` Ordner. Dies schafft eine klare Trennung von den Root-Dateien und den tiefergehenden Projekten.
-5.  **`CognitorAxiomFlux_Ecosystem/`:** Dies ist der neue Name für den ehemaligen "Cognitor AxiomFlux" Ordner. Der Zusatz "\_Ecosystem" betont, dass es sich um einen Bereich für übergreifende, oft systemnahe oder hardwarebezogene Projekte handelt, die das Gesamt-Ökosystem erweitern und die durch PRAIAI und axiomatische Prinzipien angetrieben werden. Dies ist der Ort für "alles verbindende" Elemente und potenzielle Hardware-Integrationen.
-6.  **BTBA-AVA Extension:** Da das `BitcoinInternet` Repo nun das zentrale ist, wird die BTBA-AVA Extension nicht als separates Repo verlinkt, sondern als integraler Bestandteil des hier dokumentierten `RFOF-SpiderWeb.NET` (welches durch das `InterBOxSpider-NET-Core` repräsentiert wird) verstanden. Die Dokumentation dazu findet sich in `docs/btba_ava.md`.
-
-
 ----
 
 
