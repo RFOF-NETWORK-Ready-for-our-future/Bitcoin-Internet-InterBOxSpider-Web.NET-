@@ -869,7 +869,216 @@ Dieses Repository konzentriert sich auf die **Frontend-Entwicklung** und die Ges
       * **Web3-Integration**: Spezifikationen für die Anbindung an Wallets (z.B. MetaMask) und die Interaktion mit den Smart Contracts über Frontend-Bibliotheken (z.B. Ethers.js, Web3.js).
       * **Res
 
+-----
 
+### **Korrigierte und Komplette `RFOF-NETWORK-Ready-for-our-future/BitcoinInternet` Repo Struktur**
+
+Diese Struktur integriert alle Funktionen und Konzepte direkt in das `BitcoinInternet` Repository, das sowohl die öffentliche Website (`gh-pages`) als auch das Haupt-Entwicklungs- und Hardware-Repo darstellt.
+
+```
+RFOF-NETWORK-Ready-for-our-future/BitcoinInternet/
+├── README.md                           # Haupt-README des BitcoinInternet (Öffentliche Landing Page/Übersicht der gh-pages Site)
+├── LICENSE                             # Lizenzdatei (Proprietär)
+├── .github/                            # GitHub spezifische Konfigurationen
+│   └── workflows/
+│       ├── praiai-axiom-validation.yml       # PRAIAI Axiomatische Validierung
+│       ├── bitcoin-network-sync.yml          # Bitcoin Netzwerk Synchronisation (direkt aus diesem Repo)
+│       ├── boxchain-deployment.yml           # BOxchain Bereitstellung
+│       ├── security-scan.yml                 # Kontinuierliche Sicherheitsüberprüfungen
+│       ├── code-integrity-check.yml          # Code Integritätsprüfung
+│       └── website-publish.yml               # Workflow für die gh-pages Website-Veröffentlichung
+│
+├── api_gateway.rs                      # Haupt-API-Gateway für das #BitcoinInternet
+├── bitcoin_bridge_handler.rs           # Kern-Handler für die rBTC Bitcoin-Bridge
+├── system_status_endpoint.rs           # Öffentlicher Endpunkt für den Systemstatus
+├── praiai_command_interface.rs         # REST-Schnittstelle für direkte PRAIAI-Befehle
+├── global_config.toml                  # Globale Konfigurationsdatei für das #BitcoinInternet
+├── _config.yml                         # Static Site Generator Konfiguration (für gh-pages)
+├── CNAME                               # Benutzerdefinierte Domain für gh-pages (z.B. bitcoininternet.org)
+│
+├── assets/                             # Statische Website-Assets (für gh-pages)
+│   ├── css/
+│   ├── js/
+│   ├── img/
+│   └── favicons/
+│
+├── docs/                               # Website-Dokumentation Source Files (für gh-pages)
+│   ├── index.md                        # Startseite der Dokumentation
+│   ├── overview.md                     # Allgemeine Übersicht des #BitcoinInternet
+│   ├── interboxspider_web_net.md       # Detaillierte Erläuterung von InterBOxSpider@Web.NET (dem Kernnetzwerk)
+│   ├── shadow_of_the_metropolis.md     # Detaillierte Erläuterung von Shadow Of The Metropolis (universelles Frontend)
+│   ├── praiai_yggdrasil.md             # Die Rolle von PRAIAI und Yggdrasil
+│   ├── btba_ava.md                     # Details zur BTBA-AVA Extension (als integraler Bestandteil hier dokumentiert)
+│   ├── core_services_overview.md       # Übersicht über die 8 Kern-Services (MailGrid, ChatFlow etc.)
+│   ├── architecture_layers.md          # Detailliertere Architektur-Dokumente
+│   ├── security_axioms.md              # Dokumentation der Sicherheits-Axiome
+│   ├── hardware_integration.md         # Dokumentation zu Hardware-Aspekten und Anbindung
+│   ├── contributing.md                 # Wie man beitragen kann
+│   └── faq.md                          # Häufig gestellte Fragen
+│
+└── core_projects/                      # Haupt-Ordner für alle integralen Projekte und Dienste des #BitcoinInternet
+    ├── AxiomFlux/                      # Kern-Dienst: E-Mail (Haupt-App: MailGrid)
+    │   ├── README.md
+    │   ├── architecture/
+    │   ├── contracts/
+    │   ├── praiai_integration/
+    │   ├── core_service/
+    │   └── contributing/
+    │
+    ├── VoiceNexus/                     # Kern-Dienst: Axiomatische Telekommunikation (Haupt-App: CallStream)
+    │   ├── README.md
+    │   ├── architecture/
+    │   ├── contracts/
+    │   ├── core_services/
+    │   └── interfaces/
+    │
+    ├── CipherPulse/                    # Kern-Dienst: Dezentrales Messaging (Haupt-App: ChatFlow)
+    │   ├── README.md
+    │   ├── architecture/
+    │   ├── contracts/
+    │   ├── core_services/
+    │   ├── client_sdks/
+    │   └── ui_components/
+    │
+    ├── SpectraStream/                  # Kern-Dienst: Axiomatisches Streaming (Haupt-App: SpectraStream)
+    │   ├── README.md
+    │   ├── architecture/
+    │   ├── contracts/
+    │   ├── core_services/
+    │   ├── content_delivery_network/
+    │   └── client_sdks/
+    │
+    ├── ChronoNexus/                    # Kern-Dienst: Dezentrale Soziale Netzwerke (Haupt-App: ChronoFeed)
+    │   ├── README.md
+    │   ├── architecture/
+    │   ├── contracts/
+    │   ├── core_services/
+    │   ├── content_formats/
+    │   └── praiai_ethics_module/
+    │
+    ├── QuantumForge/                   # Kern-Dienst: Axiomatisches Gaming (Haupt-App: QuantumPlay)
+    │   ├── README.md
+    │   ├── architecture/
+    │   ├── contracts/
+    │   ├── core_services/
+    │   ├── game_sdk/
+    │   └── true_ownership_module/
+    │
+    ├── PRAXIS-Cognitor/                # Kern-System: PRAIAI Core (Haupt-App: CognitorCore)
+    │   ├── README.md
+    │   ├── axiomatic_engine/
+    │   ├── cognitive_modules/
+    │   ├── learning_axioms/
+    │   └── security_guardian/
+    │
+    ├── InterBOxSpider-NET-Core/        # Kern-System: InterBOxSpider@Web.NET (Haupt-App: OmniBridge)
+    │   ├── README.md
+    │   ├── routing_protocols/
+    │   ├── quantum_nano_matrix/
+    │   ├── network_axioms/
+    │   └── node_software/
+    │
+    ├── BOxchain-Core/                  # Kern-System: BOxchain (Grundlegend, keine direkte Haupt-App)
+    │   ├── README.md
+    │   ├── consensus_axioms/
+    │   ├── vm_implementation/
+    │   ├── crypto_primitives/
+    │   └── rbtc_integration/
+    │
+    ├── Base-Languages/                 # Kern-System: Fundamentale Programmiersprachen
+    │   ├── README.md
+    │   ├── yggdrasil/
+    │   ├── mml/
+    │   ├── ml/
+    │   └── ssl/
+    │
+    └── CognitorAxiomFlux_Ecosystem/    # Übergreifendes Ökosystem-Projekt: Integrale Bereiche & Funktionen
+        ├── README.md                   # Überblick über die hier enthaltenen Bereiche
+        ├── DataVault/                  # Integrales Projekt: Dezentraler Datenspeicher (hardwarenah, systemrelevant)
+        │   ├── README.md
+        │   ├── architecture/
+        │   ├── contracts/
+        │   └── core_service/
+        │
+        ├── CodeForge/                  # Integrales Projekt: Axiomatische Code-Entwicklungsumgebung
+        │   ├── README.md
+        │   ├── architecture/
+        │   ├── core_service/
+        │   └── ide_modules/
+        │
+        ├── LinkChain/                  # Integrales Projekt: Finanz- oder Daten-Verknüpfungsdienst
+        │   ├── README.md
+        │   ├── architecture/
+        │   ├── contracts/
+        │   └── integration_modules/
+        │
+        ├── SyncVerse/                  # Integrales Projekt: Universeller Synchronisations-/Koordinationsdienst
+        │   ├── README.md
+        │   ├── architecture/
+        │   ├── core_service/
+        │   └── sync_protocols/
+        │
+        ├── KeyGuard/                   # Integrales Projekt: Axiomatische Schlüsselverwaltung/Identität
+        │   ├── README.md
+        │   ├── architecture/
+        │   ├── contracts/
+        │   └── security_modules/
+        │
+        ├── RenderFlow/                 # Integrales Projekt: Dezentrales Rendering/Content-Verarbeitung (Hardware-nahe)
+        │   ├── README.md
+        │   ├── architecture/
+        │   ├── core_service/
+        │   └── processing_units/
+        │
+        ├── GridCast/                   # Integrales Projekt: Dezentrales Broadcasting/Inhaltsverteilung
+        │   ├── README.md
+        │   ├── architecture/
+        │   ├── core_service/
+        │   └── distribution_protocols/
+        │
+        ├── VaultKey/                   # Integrales Projekt: Höchstsichere Tresor-/Asset-Verwaltung (Hardware-nahe)
+        │   ├── README.md
+        │   ├── architecture/
+        │   ├── contracts/
+        │   └── security_modules/
+        │
+        ├── functional_modules/         # Allgemeine Funktionsmodule für das gesamte Ökosystem
+        │   ├── NetRoute_Lib/
+        │   ├── ByteFlow_IO/
+        │   ├── NodeConnect_Protocol/
+        │   ├── PixelFlow_Core/
+        │   ├── StreamPulse_Monitor/
+        │   ├── VoiceLink_Codec/
+        │   ├── LogicCore_Primitives/
+        │   └── EchoComm_Adapter/
+        │
+        ├── concepts/                   # Konzepte oder kleinere, zukünftige Ideen
+        │   ├── VideoSync_Concept.md
+        │   ├── FeedPulse_Analytics.md
+        │   ├── TuneWave_Integration.md
+        │   ├── ShareSphere_Protocol.md
+        │   ├── CommLink_Specs.md
+        │   ├── PlayGrid_Expansion.md
+        │   ├── PlayVerse_Framework.md
+        │   └── TextBeam_Format.md
+        │
+        └── praiai_applications/        # Spezifische PRAIAI-Anwendungen/Optimierer innerhalb des Ökosystems
+            └── CognitorAxiomFlux_PRAIAI_Optimizer.rs
+```
+
+-----
+
+### **Wichtige Korrekturen und Klarstellungen:**
+
+1.  **Einheitliches `BitcoinInternet` Repo:** Die gesamte Struktur befindet sich nun im `RFOF-NETWORK-Ready-for-our-future/BitcoinInternet` Repository. Dies vereinfacht die Verwaltung und stärkt seine Rolle als zentraler Hub.
+2.  **Kein "NewApp-" Präfix mehr:** Die Ordner unter `CognitorAxiomFlux_Ecosystem/` heißen jetzt einfach `DataVault/`, `CodeForge/` usw. Dies betont ihren integralen Charakter und ihre Rolle als tiefgreifende Projekte innerhalb des Systems, nicht unbedingt als separate Frontend-Apps. Sie können Hardware-Konzepte, tiefere Protokolle oder Backend-Services sein, die die Gesamtfunktionalität des **\#BitcoinInternet** erweitern.
+3.  **`docs/` für `gh-pages`:** Der `docs/` Ordner ist weiterhin die Quelle für die öffentliche `gh-pages` Website, die Sie bereits unter `https://rfof-network-ready-for-our-future.github.io/Bitcoin-Internet-InterBOxSpider-Web.NET-/` hosten. Das `README.md` dient dabei oft als die initiale Landing Page.
+4.  **`core_projects/` als Haupt-Container:** Alle 8 Kern-Services (`AxiomFlux`, `VoiceNexus` etc.) sowie die foundationalen Systeme (`InterBOxSpider-NET-Core`, `BOxchain-Core`, `Base-Languages`) liegen nun unter einem übergeordneten `core_projects/` Ordner. Dies schafft eine klare Trennung von den Root-Dateien und den tiefergehenden Projekten.
+5.  **`CognitorAxiomFlux_Ecosystem/`:** Dies ist der neue Name für den ehemaligen "Cognitor AxiomFlux" Ordner. Der Zusatz "\_Ecosystem" betont, dass es sich um einen Bereich für übergreifende, oft systemnahe oder hardwarebezogene Projekte handelt, die das Gesamt-Ökosystem erweitern und die durch PRAIAI und axiomatische Prinzipien angetrieben werden. Dies ist der Ort für "alles verbindende" Elemente und potenzielle Hardware-Integrationen.
+6.  **BTBA-AVA Extension:** Da das `BitcoinInternet` Repo nun das zentrale ist, wird die BTBA-AVA Extension nicht als separates Repo verlinkt, sondern als integraler Bestandteil des hier dokumentierten `RFOF-SpiderWeb.NET` (welches durch das `InterBOxSpider-NET-Core` repräsentiert wird) verstanden. Die Dokumentation dazu findet sich in `docs/btba_ava.md`.
+
+
+----
 
 
 
