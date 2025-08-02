@@ -1,0 +1,16 @@
+# assets/img/architecture_diagram.png
+#
+# This file is a placeholder for a PNG image representing the high-level
+# architecture of the #BitcoinInternet.
+#
+# **You will need to create and upload your actual architecture diagram here.**
+#
+# It should visually represent:
+# - The central role of InterBOxSpider@Web.NET.
+# - The overlay of Shadow Of The Metropolis.
+# - The connection to the Bitcoin Network.
+# - The integration of PRAIAI and Yggdrasil.
+# - How the 8 core services fit into the ecosystem.
+# - The relationship between public and private repositories.
+#
+# File type: PNG (for clear diagrams with transparency)
