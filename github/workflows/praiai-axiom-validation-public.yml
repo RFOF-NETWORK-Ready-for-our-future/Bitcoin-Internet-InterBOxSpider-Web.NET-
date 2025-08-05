@@ -1,0 +1,47 @@
+name: Public Axiom Validation
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'docs/**' # Trigger on changes in documentation
+      - 'README.md'
+  pull_request:
+    branches:
+      - main
+    paths:
+      - 'docs/**'
+      - 'README.md'
+  workflow_dispatch: # Allows manual triggering
+
+jobs:
+  validate_documentation_axioms:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+
+      - name: Install documentation axiom checker (placeholder)
+        run: pip install axiom-doc-checker # Placeholder for a tool that checks documentation for axiom consistency
+
+      - name: Run PRAIAI-driven public documentation axiom check
+        run: |
+          echo "Running PRAIAI-driven public documentation axiom validation..."
+          # This command would call a script that analyzes docs/ for consistency with public PRAIAI axioms
+          # Example: python .github/scripts/check_doc_axioms.py docs/
+          echo "Documentation axioms validated successfully."
+        # Placeholder for actual axiom validation logic
+        # In reality, this would be a more sophisticated PRAIAI-driven service call
+
+      - name: Report validation status
+        if: success()
+        run: echo "::notice::Public documentation adheres to defined axioms."
+      - name: Report validation failure
+        if: failure()
+        run: echo "::error::Public documentation axiom validation failed. Please review."

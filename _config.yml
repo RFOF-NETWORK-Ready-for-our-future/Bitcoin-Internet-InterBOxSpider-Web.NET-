@@ -1,0 +1,81 @@
+# _config.yml (MkDocs configuration)
+# This file configures how the 'docs/' folder is built into the public website.
+
+site_name: #BitcoinInternet: The Axiomatic Quantum Leap
+site_url: https://rfof-network-ready-for-our-future.github.io/Bitcoin-Internet-InterBOxSpider-Web.NET-/ # Or your custom domain if CNAME is set up and published
+site_description: Building the future of decentralized, axiomatically secured digital existence.
+repo_url: https://github.com/RFOF-NETWORK-Ready-for-our-future/BitcoinInternet
+repo_name: RFOF-NETWORK-Ready-for-our-future/BitcoinInternet
+edit_uri: edit/main/docs # Allows "Edit this page" links if you want them
+
+nav:
+  - Home: index.md
+  - Overview: overview.md
+  - Core Pillars:
+    - InterBOxSpider@Web.NET: interboxspider_web_net.md
+    - Shadow Of The Metropolis: shadow_of_the_metropolis.md
+    - PRAIAI & Yggdrasil: praiai_yggdrasil.md
+  - Ecosystem:
+    - BTBA-AVA Extension: btba_ava.md
+    - Core Services: core_services_overview.md
+  - Architecture & Security:
+    - Layers: architecture_layers.md
+    - Axioms: security_axioms.md
+    - Hardware Integration: hardware_integration.md
+  - Private RFOF Repo: private_repo_access.md
+  - Contribute: contributing.md
+  - FAQ: faq.md
+
+theme:
+  name: material
+  custom_dir: assets # Point to your custom CSS/JS
+  palette:
+    # Scheme for light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: black # Example: Bitcoin Internet Brand Primary
+      accent: red # Example: Bitcoin Internet Brand Accent
+      toggle:
+        icon: material/brightness-4 # Sun icon
+        name: Switch to dark mode
+    # Scheme for dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: black # Example: Bitcoin Internet Brand Primary
+      accent: red # Example: Bitcoin Internet Brand Accent
+      toggle:
+        icon: material/brightness-7 # Moon icon
+        name: Switch to light mode
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.expand
+    - search.highlight
+    - search.share
+    - content.tabs.link
+
+extra_css:
+  - assets/css/style.css # Link to your custom CSS
+
+extra_javascript:
+  - assets/js/main.js # Link to your custom JS
+
+markdown_extensions:
+  - attr_list
+  - md_in_html
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.critic
+  - pymdownx.caret
+  - pymdownx.mark
+  - pymdownx.tilde
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_datasource: !!python/name:material.extensions.emoji.twemoji
+
+plugins:
+  - search
+  # Add other MkDocs plugins if needed, e.g., for analytics, sitemap
