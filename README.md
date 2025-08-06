@@ -1168,3 +1168,150 @@ Diese Tabelle bietet einen quantitativen Überblick über die Dateibestände und
 Diese detaillierte Übersicht unterstreicht die Robustheit und die durchdachte Struktur unseres gesamten **@RFOF-NETWORK** Ökosystems.
 
 ---
+
+
+# Was noch Fehlt oder Falsch konfiguriert bzw übereitet werden muss
+
+
+
+---
+
+## 1. **Vorhandene Dateien/Ordner (laut Bildern 1–6):**
+
+### Top-Level
+- `README.md`
+- `LICENSE`
+- `.github/workflows/website-publish.yml`
+- `.github/workflows/praiai-axiom-validation-public.yml`
+- `_config.yml`
+- `global_config_public.toml`
+
+### `docs/`
+- `docs/README.md`
+- `docs/index.md`
+- `docs/overview.md`
+- `docs/interboxspider_web_net.md`
+- `docs/shadow_of_the_metropolis.md`
+- `docs/praiai_yggdrasil.md`
+- `docs/BTBA-AVA.md`
+- `docs/core_services_overview.md`
+- `docs/architecture_layers.md`
+- `docs/security_axioms.md`
+- `docs/hardware_integration.md`
+- `docs/private_repo_access.md`
+- `docs/contributing.md`
+- `docs/faq.md`
+
+### `assets/`
+- `assets/js/main.js`
+- `assets/css/style.css`
+- `assets/favicons/favicon.ico`
+- `assets/img/hero_background.jpg`
+- `assets/img/architecture_diagram.png`
+- `assets/img/praiai_icon.svg`
+- `assets/img/logo_bitcoininternet.svg`
+
+### Services/Config/Endpoints
+- `system_status_endpoint.rs`
+- `api_gateway_public_status.rs`
+
+### Projekte
+- `projects/wn-mail-service/README.md`
+- `projects/wn-mail-service/architecture/wn_mail_architecture.md`
+- `projects/wn-mail-service/architecture/security_axioms.md`
+
+---
+
+## 2. **Was fehlt bzw. ist nicht korrekt/umzubennen?**
+
+### **A. Top-Level und Hauptdienste**
+#### Fehlt:
+- `core_projects/`-Ordner & Unterprojekte (wie `AxiomFlux`, `VoiceNexus`, `CipherPulse`, `SpectraStream`, `ChronoNexus`)
+    - Diese Ordner mit README und Basisstruktur fehlen vollständig!
+- Weitere Rust-Service-Dateien:
+    - `api_gateway.rs`  
+    - `bitcoin_bridge_handler.rs`
+    - `praiai_command_interface.rs`
+
+#### Zu ändern:
+- Die Datei `global_config_public.toml` sollte laut Struktur `global_config.toml` heißen.
+- `api_gateway_public_status.rs` sollte umbenannt werden zu `api_gateway.rs` (wenn es die Haupt-API ist).
+
+---
+
+### **B. .github/workflows**
+#### Fehlt:
+- Weitere Workflow-Dateien:
+    - `boxchain-deployment.yml`
+    - `security-scan.yml`
+    - `code-integrity-check.yml`
+
+---
+
+### **C. assets/**
+#### Fehlt:
+- `assets/js/` nur `main.js` vorhanden – weitere JS-Dateien falls spezifisch benötigt.
+- `assets/img/` mehr Beispielbilder (nur Platzhalter).
+- `assets/favicons/` nur `favicon.ico` vorhanden, ggf. weitere Formate (apple-touch-icon, etc.).
+
+---
+
+### **D. projects/**  
+(wn-mail-service ist da, aber weitere Services fehlen)
+
+---
+
+## **3. Korrekte Reihenfolge und Dateinamen für das Hinzufügen/Umbenennen**
+
+### **A. Hauptdienste hinzufügen**
+```plaintext
+core_projects/
+├── AxiomFlux/
+│   ├── README.md
+│   ├── architecture/
+│   ├── contracts/
+│   ├── praiai_integration/
+│   ├── core_service/
+│   └── contributing/
+├── VoiceNexus/
+├── CipherPulse/
+├── SpectraStream/
+├── ChronoNexus/
+```
+
+### **B. Service-Files und Endpunkte**
+```plaintext
+api_gateway.rs
+bitcoin_bridge_handler.rs
+praiai_command_interface.rs
+```
+
+### **C. Workflows**
+```plaintext
+.github/workflows/
+├── boxchain-deployment.yml
+├── security-scan.yml
+├── code-integrity-check.yml
+```
+
+### **D. Umbenennen**
+- global_config_public.toml → global_config.toml
+- api_gateway_public_status.rs → api_gateway.rs (falls passend)
+
+---
+
+### **E. Projekte/Weitere Module**
+Füge weitere Module nach Bedarf hinzu unter `projects/`.
+
+---
+
+## **FAZIT:**  
+Die Doku und die meisten Assets sind vorhanden und korrekt.  
+Es fehlen vor allem:
+- Die Hauptdienste-Ordner unter `core_projects/` (mit Basisstruktur)
+- Einige Rust-Service-Dateien
+- Einige Workflows  
+- Teils Umbenennungen für Konsistenz
+
+---
+
