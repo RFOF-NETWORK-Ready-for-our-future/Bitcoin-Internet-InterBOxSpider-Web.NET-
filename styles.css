@@ -1,0 +1,338 @@
+CSS
+
+/*
+ * Schablone für das Design eines InterBOxSpider@Web.NET-Frontends.
+ * Diese Datei definiert das grundlegende Layout, die Typografie und die
+ * visuelle Identität für jede Instanz der Plattform.
+ */
+
+/* ==================================== */
+/* Globale Stil-Definitionen            */
+/* ==================================== */
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #FFFFFF;
+    color: #333333;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    font-size: 15px;
+}
+
+main {
+    flex-grow: 1;
+}
+
+/* Container für alle Hauptinhalte */
+.header-content,
+.content-container,
+.footer-content {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 15px;
+    box-sizing: border-box;
+}
+
+/* ==================================== */
+/* Header & Navigation                  */
+/* ==================================== */
+
+.main-header {
+    background-color: #FFFFFF;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.07);
+    padding: 10px 0;
+    border-bottom: 1px solid #E0E0E0;
+    z-index: 100;
+    position: sticky;
+    top: 0;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+}
+
+.header-logo-svg-container {
+    width: 45px;
+    height: 45px;
+    flex-shrink: 0;
+}
+
+.header-logo-svg-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.site-title {
+    color: #0088cc;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.4em;
+    font-weight: bold;
+    margin: 0;
+    flex-grow: 1;
+    text-align: left;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    min-width: 0;
+}
+
+/* ==================================== */
+/* Hero-Sektion & Suche                 */
+/* ==================================== */
+
+.hero-section {
+    background-image: linear-gradient(to right bottom, #4299e1, #2b6cb0);
+    color: #ffffff;
+    padding: 60px 20px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    /* PFAD ZUM HINTERGRUNDBILD WURDE HIER AKTUALISIERT */
+    background: url('./assets/dein-hintergrundbild.svg') no-repeat center center/cover;
+    opacity: 0.08;
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.hero-logo {
+    width: 120px;
+    height: 120px;
+    margin: 0 auto 1.5rem;
+}
+
+.hero-content h1 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: clamp(2em, 7vw, 2.8em);
+    margin-bottom: 0.5em;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    color: #FFFFFF;
+    border-bottom: none;
+    word-break: break-word;
+}
+
+.hero-content p {
+    font-size: 1.2em;
+    max-width: 600px;
+    margin: 0 auto 1.5em;
+    color: #f0f0f0;
+}
+
+.praiai-search-container {
+    max-width: 600px;
+    margin: 30px auto;
+    display: flex;
+    border: 2px solid #4299e1;
+    border-radius: 50px;
+    overflow: hidden;
+    box-shadow: 0 0 15px rgba(66, 153, 225, 0.7);
+    background-color: #ffffff;
+}
+
+.praiai-search-input {
+    flex-grow: 1;
+    padding: 14px 22px;
+    border: none;
+    outline: none;
+    font-size: 1em;
+    background-color: transparent;
+    color: #333333;
+}
+
+.praiai-search-input::placeholder {
+    color: #999;
+}
+
+.praiai-search-button {
+    background-color: #4299e1;
+    border: none;
+    padding: 0 25px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    color: white;
+}
+
+.praiai-search-button svg { width: 20px; height: 20px; }
+.praiai-search-button:hover { background-color: #63b3ed; }
+
+/* ==================================== */
+/* Allgemeine Inhaltsstile              */
+/* ==================================== */
+
+.content-container {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+.text-section {
+    margin-bottom: 2rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid #e0e0e0;
+}
+.text-section:last-child { border-bottom: none; }
+
+h2 {
+    color: #0088cc;
+    font-family: 'Orbitron', sans-serif;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid rgba(0, 136, 204, 0.3);
+    font-size: 2.2em;
+    word-break: break-word;
+}
+h3 { font-size: 1.6em; }
+h4 { font-size: 1.3em; }
+
+p { margin-bottom: 1rem; }
+a { color: #0088cc; text-decoration: none; }
+a:hover { color: #00aaff; text-decoration: underline; }
+
+/* Code-Blöcke */
+pre {
+    background-color: #2d3748;
+    color: #e2e8f0;
+    padding: 1.2em;
+    border-radius: 6px;
+    overflow-x: auto;
+    margin-bottom: 1.5em;
+    font-family: 'Fira Code', monospace;
+    font-size: 0.9em;
+    white-space: pre-wrap;
+    word-break: break-all;
+}
+code {
+    font-family: 'Fira Code', monospace;
+    background-color: #e0e0e0;
+    padding: 0.2em 0.4em;
+    border-radius: 3px;
+    color: #0088cc;
+}
+pre code {
+    background-color: transparent;
+    color: inherit;
+    padding: 0;
+}
+
+/* ==================================== */
+/* Spezifisches Modul: Explorer         */
+/* ==================================== */
+
+#boxchain-explorer-section {
+    background: #f8f9fa;
+    border: 1px solid #dee2e6;
+    border-radius: 8px;
+    padding: 1.5rem;
+}
+
+#boxchain-explorer-section h2 {
+    font-size: clamp(1.4em, 5vw, 1.6em);
+    margin-top: 0;
+}
+
+.explorer-header {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.explorer-top-row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.explorer-controls {
+    display: flex;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    overflow: hidden;
+    align-self: flex-start;
+}
+
+.explorer-controls button {
+    font-size: 0.85em;
+    font-weight: 500;
+    border: none;
+    background-color: #fff;
+    padding: 8px 15px;
+    cursor: pointer;
+    border-left: 1px solid #ccc;
+    white-space: nowrap;
+}
+.explorer-controls button:first-child { border-left: none; }
+.explorer-controls button.active { background-color: #343a40; color: white; }
+
+.explorer-actions { display: flex; flex-wrap: wrap; gap: 0.5rem; align-self: flex-start; }
+.explorer-actions button { font-size: 0.8em; padding: 6px 12px; background-color: #6c757d; color: white; border: none; border-radius: 4px; cursor: pointer; }
+
+.explorer-search { display: flex; width: 100%; }
+.explorer-search input { width: 100%; border: 1px solid #ccc; padding: 10px; border-radius: 6px 0 0 6px; font-size: 0.9em; }
+.explorer-search button { border: 1px solid #0088cc; background-color: #0088cc; color: white; padding: 0 20px; border-radius: 0 6px 6px 0; cursor: pointer; }
+
+.explorer-results table { width: 100%; border-collapse: collapse; font-size: 0.8em; table-layout: fixed; }
+.explorer-results th, .explorer-results td { border-bottom: 1px solid #dee2e6; padding: 10px; text-align: left; vertical-align: middle; word-break: break-all; }
+.explorer-results th { background-color: transparent; color: #6c757d; text-transform: uppercase; font-size: 0.9em; border-bottom: 2px solid #343a40; }
+.explorer-results tr:nth-child(even) { background-color: #f8f9fa; }
+.explorer-results td:last-child, .explorer-results th:last-child { text-align: right; }
+
+.detail-view { padding: 1rem; border: 1px solid #dee2e6; background-color: #fff; margin-top: 1rem; text-align: left; font-size: 0.9em; }
+
+/* ==================================== */
+/* Spezifisches Modul: Account          */
+/* ==================================== */
+
+#account-section {
+    margin-top: 1.5rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid #dee2e6;
+    text-align: center;
+}
+#logged-out-view { display: flex; flex-direction: column; align-items: center; gap: 10px; }
+#logged-out-view .social-logins { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; }
+#account-section button { font-size: 0.85em; padding: 8px 14px; cursor: pointer; border-radius: 4px; border: 1px solid #6c757d; background: #fff; color: #6c757d; font-weight: 500; }
+#account-section button.rfof-login { background-color: #0088cc; border-color: #0088cc; color: white; margin-bottom: 10px; }
+
+#logged-in-view { display: none; }
+#logged-in-view.active { display: flex; align-items: center; justify-content: center; gap: 10px; }
+#logged-in-view img { width: 32px; height: 32px; border-radius: 50%; }
+.console-view { border: 1px solid #ced4da; padding: 1rem; margin-top: 1rem; background: white; text-align: left; border-radius: 6px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
+
+/* ==================================== */
+/* Footer                               */
+/* ==================================== */
+
+.main-footer {
+    background-color: #2d3748;
+    color: #e2e8f0;
+    text-align: center;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+    margin-top: 3rem;
+    font-size: 0.9em;
+}
+.main-footer a { color: #63b3ed; }
+.main-footer a:hover { color: #90cdf4; }
