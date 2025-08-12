@@ -1,0 +1,83 @@
+HTML
+
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>BitcoinInternet – [Markenname des Users]</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/atom-one-dark.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Orbitron:wght=700&family=Fira+Code&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="menu_styles.css">
+    <link rel="stylesheet" href="logo_3d_styles.css">
+</head>
+<body>
+
+    <header class="main-header">
+        <div class="header-content">
+            <div class="header-logo-svg-container">
+                <canvas id="logo-canvas"></canvas>
+            </div>
+            <h1 class="site-title">BitcoinInternet - [Markenname des Users]</h1>
+            <nav class="navbar">
+                <div class="hamburger-icon" id="hamburger">
+                    <div class="bar"></div><div class="bar"></div><div class="bar"></div>
+                </div>
+                <ul class="nav-list" id="navLinks">
+                    <li><a href="#link1">[Menüpunkt 1]</a></li>
+                    <li><a href="#link2">[Menüpunkt 2]</a></li>
+                    <li><a href="#link3">[Menüpunkt 3]</a></li>
+                    <li><a href="#link4">[Menüpunkt 4]</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero-section">
+            <div class="hero-content">
+                <div class="hero-logo">
+                    </div>
+                <h1>[Großer Titel der Seite des Users]</h1>
+                <p>Ein kurzer Slogan oder eine Beschreibung, die die Plattform des Users zusammenfasst.</p>
+                <div class="praiai-search-container">
+                    <input type="text" id="praiai-search-input" class="praiai-search-input" placeholder="Suche im BitcoinInternet mit PRAI...">
+                    <button class="praiai-search-button" onclick="performGlobalSearch()" aria-label="Suchen">
+                        <svg aria-hidden="true" focusable="false" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.1-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z"></path></svg>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <div class="content-container">
+            <section id="about" class="text-section">
+                <h2>[Titel des ersten Inhaltsblocks]</h2>
+                <p>Der Haupttext oder die Beschreibung für diesen Bereich. Dies könnte die Mission, Vision oder die Funktionsweise der Plattform des Users erklären.</p>
+            </section>
+            
+            <section id="vision-mission" class="text-section">
+                <h2>[Titel des zweiten Inhaltsblocks]</h2>
+                <p>Der zweite Haupttext, der weitere Details oder einzigartige Merkmale der Plattform beschreibt.</p>
+            </section>
+            
+            <section id="boxchain-explorer-section" class="text-section">
+                <div id="boxchain-explorer-target"></div>
+                <div id="account-section"></div>
+            </section>
+        </div>
+    </main>
+
+    <footer class="main-footer">
+        <div class="footer-content">
+            <p>&copy; [Jahr] [Name des Users oder der Plattform]. Alle Rechte vorbehalten.</p>
+            <p><a href="https://docs.github.com/en/repositories/creating-and-managing-repositories/quickstart-for-repositories" target="_blank">GitHub Repository</a></p>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    <script src="script.js"></script>
+    <script src="menu_script.js"></script>
+    <script type="module" src="logo_3d.js"></script>
+</body>
+</html>
